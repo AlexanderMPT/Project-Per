@@ -1,0 +1,24 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /config/
+Disallow: /css/
+Disallow: /elements/
+Disallow: /img/
+Disallow: /img/elements/
+Disallow: /img/icon/
+Disallow: /img/svg/
+Disallow: /vedor/
+Disallow: /vedor/composer/
+Disallow: /vedor/phpmaler/
+Disallow: */pdf$
+
+Allow: */*.jpg*
+
+Craw-delay: 505700
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.ylancompany_ru\.ru$ [NC]
+RewriteRule ^(.*)$ http://ylancompany_ru/$1 [R=301,L]
+
+Sitemap: http://ylancompany.ru/sitemap.xml
